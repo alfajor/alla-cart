@@ -1,0 +1,52 @@
+{
+  "name": "alla-cart",
+  "description": "A better React powered shopping cart",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/alla-cart.umd.js",
+  "module": "dist/alla-cart.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/alla-cart.es.js",
+      "require": "./dist/alla-cart.umd.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/index.ts",
+    "src/README.md"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react-icons": "^5.5.0",
+    "styled-components": "^6.1.19",
+    "universal-cookie": "^8.0.1",
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.4",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}

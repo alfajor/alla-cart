@@ -1,0 +1,25 @@
+{
+    "sampleProducts": [
+        {
+            "id": "1",
+            "name": "Product 1",
+            "description": "This is a sample product",
+            "image": "/assets/cranberry-pudding.png",
+            "unit_price": 10.00
+        },
+        {
+            "id": "2",
+            "name": "Product 2",
+            "description": "This is a second sample product",
+            "image": "/assets/chocolate-pudding.png",
+            "unit_price": 20.00            
+        },
+        {
+            "id": "3",
+            "name": "Product 3",
+            "description": "This is a third sample product",
+            "image": "/assets/ginger-pudding.png",
+            "unit_price": 30.00          
+        }
+    ]       
+}
