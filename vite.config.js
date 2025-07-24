@@ -10,8 +10,9 @@ export default defineConfig(({ command }) => {
     build: {
       lib: {
         entry: path.resolve(__dirname, 'src/index.ts'),
-        name: 'Alla Cart',
+        name: 'AllaCart',
         fileName: (format) => `alla-cart.${format}.js`,
+        formats: ['es', 'umd']
       },
       rollupOptions: {
         external: ['react', 'react-dom'],

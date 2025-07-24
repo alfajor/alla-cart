@@ -1,7 +1,9 @@
 {
   "name": "alla-cart",
-  "description": "A better React powered shopping cart",
+  "description": "A simple, customizable shopping cart",
   "version": "1.0.0",
+  "author": "me",
+  "license": "MIT",
   "type": "module",
   "main": "dist/alla-cart.umd.js",
   "module": "dist/alla-cart.es.js",
@@ -13,9 +15,7 @@
     }
   },
   "files": [
-    "dist",
-    "src/index.ts",
-    "src/README.md"
+    "dist"
   ],
   "peerDependencies": {
     "react": ">=17.0.0",
@@ -30,9 +30,7 @@
   "dependencies": {
     "react-icons": "^5.5.0",
     "styled-components": "^6.1.19",
-    "universal-cookie": "^8.0.1",
-    "react": ">=17.0.0",
-    "react-dom": ">=17.0.0"
+    "universal-cookie": "^8.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

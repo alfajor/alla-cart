@@ -169,7 +169,7 @@ const CartQuantityWrapper = styled.div`
 
 const QuantityCount = styled.span`
     display: block;
-    padding: 3px 8px;
+    padding: 2.8px 8px;
     border-top: 1px solid #111;
     border-bottom: 1px solid #111;
     background-color: transparent;
