@@ -70,12 +70,10 @@ const AllaCart: React.FC<CartProps> = ({
             }) : <CartActions>
                     <h4>{emptyCartText ? emptyCartText : 'Your cart is empty'}</h4> 
                     <a href={cartCTAButtonLink ? cartCTAButtonLink : ''}>
-                      {/* TODO: config btn style props */}
                       <CartCTAButton backgroundColor={cartCTABackgroundColor} textColor={cartCTATextColor}>{cartCTAButtonText ? cartCTAButtonText : 'Continue shopping'}</CartCTAButton>
                     </a>                  
                  </CartActions>
             }
-
             <div>
               {cartProducts && cartProducts.length > 0 ? 
                   <CartButtonsWrapper>

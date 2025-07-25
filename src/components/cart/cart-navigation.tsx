@@ -42,8 +42,6 @@ const CartNavigation: React.FC<CartNavigationTypes> = ({children, cartIcon, quan
 const CartNavWrapper = styled.div`
     display: flex;
     flex-flow: column;
-    position: sticky;
-    top: 0;
     z-index: 77;
 `;
 
@@ -52,7 +50,6 @@ const CartMenu = styled.div`
     flex-flow: row;
     align-items: center;
     justify-content: end;
-    height: 75px;
     width: 100%;
     background-color: transparent;
 `;
@@ -79,11 +76,9 @@ const menuOpen = css`
     @media screen and (min-width: 2000px ) {
         transform: translateX(70%);
     }
-
     @media screen and (max-width: 1100px ) {
         transform: translateX(60%);
     }
-
     @media screen and (max-width: 900px ) {
         transform: translateX(40%);
     }
@@ -98,6 +93,7 @@ const menuClosed = css`
 const CartFlyout = styled.div<{isopen: boolean}>`
     position: absolute;
     right: 0;
+    top: 0;
     background-color: #fff;
     width: 100%;
     padding: 0px 10px;
