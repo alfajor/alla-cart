@@ -2,24 +2,45 @@
     "sampleProducts": [
         {
             "id": "1",
-            "name": "Product 1",
+            "name": "Cranberry Pudding",
             "description": "This is a sample product",
-            "image": "/assets/cranberry-pudding.png",
+            "image": "./cranberry-pudding.png",
             "unit_price": 10.00
         },
         {
             "id": "2",
-            "name": "Product 2",
+            "name": "Chocolate Cherry Pudding",
             "description": "This is a second sample product",
-            "image": "/assets/chocolate-pudding.png",
+            "image": "./chocolate-pudding.png",
             "unit_price": 20.00            
         },
         {
             "id": "3",
-            "name": "Product 3",
+            "name": "Ginger Pudding",
             "description": "This is a third sample product",
-            "image": "/assets/ginger-pudding.png",
+            "image": "./ginger-pudding.png",
             "unit_price": 30.00          
+        },
+        {
+            "id": "4",
+            "name": "Chocolate Cherry Pudding Revised",
+            "description": "This is a fourth sample product",
+            "image": "./chocolate-pudding.png",
+            "unit_price": 12.00          
+        },
+        {
+            "id": "5",
+            "name": "Cranberry Pudding Remix",
+            "description": "This is a fifth sample product",
+            "image": "./cranberry-pudding.png",
+            "unit_price": 15.00          
+        },
+        {
+            "id": "6",
+            "name": "Ginger Pudding Reprise",
+            "description": "This is a sixth sample product",
+            "image": "./ginger-pudding.png",
+            "unit_price": 25.00          
         }
     ]       
 }

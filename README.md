@@ -2,6 +2,11 @@
 
 AllaCart is a simple, customizable React shopping cart feature. Supply your own product data and the cart does the rest!
 
+## Demo
+
+To see the cart in action, check out the example demo.
+[Alla Cart demo](https://alfajor.github.io/alla-cart/)
+
 # Install
 
 `npm install alla-cart`
@@ -76,6 +81,7 @@ type CartProps = {
   emptyCartText?: string, // custom empty cart message - optional
   cartIcon?: React.ReactNode, // custom cart icon - optional
   trashIcon?: React.ReactNode, // custom trash icon - optional
+  quantityButtonPadding?: string // custom padding for the quantity counter (+/-) - optional
   quantityCountBackgroundColor?: string // qty counter background color - optional
   quantityCountColor?: string, // qty counter color - optional
   checkoutComponent?: React.ReactNode, // custom checkout component - optional

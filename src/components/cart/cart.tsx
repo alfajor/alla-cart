@@ -14,6 +14,7 @@ type CartProps = {
   emptyCartText?: string,
   cartIcon?: React.ReactNode,
   trashIcon?: React.ReactNode,
+  quantityButtonPadding?: string,
   quantityCountBackgroundColor?: string
   quantityCountColor?: string,
   checkoutComponent?: React.ReactNode, 
@@ -23,7 +24,7 @@ type CartProps = {
 
 const AllaCart: React.FC<CartProps> = ({
     renderCartItem, cartLabel, cartCTAButtonText, cartCTAButtonLink, cartCTABackgroundColor, cartCTATextColor, emptyCartText, cartIcon, trashIcon,
-    quantityCountBackgroundColor, quantityCountColor, checkoutComponent, currencyLocale, currencyType
+    quantityButtonPadding, quantityCountBackgroundColor, quantityCountColor, checkoutComponent, currencyLocale, currencyType
   }) => {
   const { cartProducts, incrementCartItem, decrementCartItem, clearCart, removeCartItem, getCartTotal, getCartItems, currencyFormatter } = useCart();
 
@@ -58,7 +59,7 @@ const AllaCart: React.FC<CartProps> = ({
                       <CartOperationsWrapper>
                           <OperationsButton onClick={() => decrementCartItem(item.id)} name="decrement cart qty">-</OperationsButton>
                           <CartQuantityWrapper>
-                              <QuantityCount>{item.quantity}</QuantityCount>
+                              <QuantityCount qtyCountPadding={quantityButtonPadding}>{item.quantity}</QuantityCount>
                           </CartQuantityWrapper>
                           <OperationsButton onClick={() => incrementCartItem(item.id)} name="increment cart qty">+</OperationsButton>
 
@@ -167,9 +168,9 @@ const CartQuantityWrapper = styled.div`
     text-align: center;
 `;
 
-const QuantityCount = styled.span`
+const QuantityCount = styled.span<{qtyCountPadding?: string}>`
     display: block;
-    padding: 6px 8px;
+    padding: ${(props) => props.qtyCountPadding ? props.qtyCountPadding : '6px 8px'};
     border-top: 1px solid #111;
     border-bottom: 1px solid #111;
     background-color: transparent;
