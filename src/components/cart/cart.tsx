@@ -9,6 +9,8 @@ type CartProps = {
   cartLabel?: string,
   cartCTAButtonText?: string,
   cartCTAButtonLink?: string,
+  cartCTABackgroundColor?: string,
+  cartCTATextColor?: string,
   emptyCartText?: string,
   cartIcon?: React.ReactNode,
   trashIcon?: React.ReactNode,
@@ -20,7 +22,7 @@ type CartProps = {
 }
 
 const AllaCart: React.FC<CartProps> = ({
-    renderCartItem, cartLabel, cartCTAButtonText, cartCTAButtonLink, emptyCartText, cartIcon, trashIcon,
+    renderCartItem, cartLabel, cartCTAButtonText, cartCTAButtonLink, cartCTABackgroundColor, cartCTATextColor, emptyCartText, cartIcon, trashIcon,
     quantityCountBackgroundColor, quantityCountColor, checkoutComponent, currencyLocale, currencyType
   }) => {
   const { cartProducts, incrementCartItem, decrementCartItem, clearCart, removeCartItem, getCartTotal, getCartItems, currencyFormatter } = useCart();
@@ -69,7 +71,7 @@ const AllaCart: React.FC<CartProps> = ({
                     <h4>{emptyCartText ? emptyCartText : 'Your cart is empty'}</h4> 
                     <a href={cartCTAButtonLink ? cartCTAButtonLink : ''}>
                       {/* TODO: config btn style props */}
-                      <CartCTAButton>{cartCTAButtonText ? cartCTAButtonText : 'Continue shopping'}</CartCTAButton>
+                      <CartCTAButton backgroundColor={cartCTABackgroundColor} textColor={cartCTATextColor}>{cartCTAButtonText ? cartCTAButtonText : 'Continue shopping'}</CartCTAButton>
                     </a>                  
                  </CartActions>
             }
@@ -78,7 +80,7 @@ const AllaCart: React.FC<CartProps> = ({
               {cartProducts && cartProducts.length > 0 ? 
                   <CartButtonsWrapper>
                     {checkoutComponent} 
-                    <CartCTAButton onClick={() => clearCart()}>{'Clear cart'}</CartCTAButton>
+                    <CartCTAButton backgroundColor={cartCTABackgroundColor} textColor={cartCTATextColor} onClick={() => clearCart()}>{'Clear cart'}</CartCTAButton>
                   </CartButtonsWrapper>
               : null}
             </div>
@@ -121,11 +123,11 @@ const CartActions = styled.div`
   }
 `;
 
-const CartCTAButton = styled.button`
-  background: transparent;
-  border: 1px solid #111;
+const CartCTAButton = styled.button<{backgroundColor?: string, textColor?: string}>`
+  background: ${(props) => props.backgroundColor ? props.backgroundColor : 'transparent'};
+  border: 1px solid ${(props) => props.backgroundColor ? props.backgroundColor : '#111'};
   padding: 10px 8px;
-  color: #111;
+  color: ${(props) => props.textColor ? props.textColor : '#111'};
   width: 20%;
   cursor: pointer;
 
@@ -169,7 +171,7 @@ const CartQuantityWrapper = styled.div`
 
 const QuantityCount = styled.span`
     display: block;
-    padding: 2.8px 8px;
+    padding: 6px 8px;
     border-top: 1px solid #111;
     border-bottom: 1px solid #111;
     background-color: transparent;

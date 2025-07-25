@@ -58,7 +58,9 @@ const CartMenu = styled.div`
 `;
 
 const CartQuantityCount = styled.span<{countBackgroundColor?: string, countColor?: string}>`
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     right: 28px;
     bottom: 18px;
