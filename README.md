@@ -8,7 +8,7 @@ AllaCart is a simple React shopping cart feature that can be customized to your 
 
 # Usage
 
-AllaCart is straightforward to use. Import `CartProvider` and simply wrap your root component in the `CartProvider` context:
+AllaCart is simple to use. Import `CartProvider` and simply wrap your root component in the `CartProvider` context:
 
 ```javascript
 import { CartProvider } from "alla-cart";
@@ -30,7 +30,7 @@ The context provider takes two props: `products` and `getItemPrice`.
 Finally, import the `AllaCart` component and `useCart` hook into your app.
 
 ```javascript
-import AllaCart, { useCart } from "alla-cart";
+import { AllaCart, useCart } from 'alla-cart';
 
 const App = () => {
   const { addToCart } = useCart();
@@ -67,24 +67,24 @@ The `AllaCart` component accepts several props for additional customization.
 
 ```javascript
 type CartProps = {
-  renderCartItem: (item: any) => React.ReactNode, // product cart data callback
-  cartLabel?: string, // cart title
-  cartCTAButtonText?: string, // optional cta message
-  cartCTAButtonLink?: string, // optional cta link
-  emptyCartText?: string, // custom empty cart message
-  cartIcon?: React.ReactNode, // custom cart icon
-  trashIcon?: React.ReactNode, // custom trash icon
-  quantityCountBackgroundColor?: string // qty counter background color
-  quantityCountColor?: string, // qty counter color
-  checkoutComponent?: React.ReactNode, // custom checkout component
-  currencyLocale?: string | 'en-US', // currency locale
-  currencyType?: string | 'USD' // currency
+  renderCartItem: (item: any) => React.ReactNode, // product cart data callback - required
+  cartLabel?: string, // cart title - optional
+  cartCTAButtonText?: string, // cta message - optional
+  cartCTAButtonLink?: string, // cta link - optional
+  emptyCartText?: string, // custom empty cart message - optional
+  cartIcon?: React.ReactNode, // custom cart icon - optional
+  trashIcon?: React.ReactNode, // custom trash icon - optional
+  quantityCountBackgroundColor?: string // qty counter background color - optional
+  quantityCountColor?: string, // qty counter color - optional
+  checkoutComponent?: React.ReactNode, // custom checkout component - optional
+  currencyLocale?: string | 'en-US', // currency locale - optional
+  currencyType?: string | 'USD' // currency - optional
 }
 ```
 
 The only required prop is `renderCartItem`, which accepts a callback to a data obj that contains your cart's products.
 
-The easiest way to use this is to simply pass in a custom component containing your product data. The cart stores and retrieves this data from localstorage.
+The easiest way to use this is to simply pass in a custom component containing your product data. The cart will store and retrieve this data from localstorage.
 
 Additional props support cart labelling, CTA buttons, and styling.
 

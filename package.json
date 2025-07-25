@@ -1,9 +1,15 @@
 {
   "name": "alla-cart",
   "description": "A simple, customizable shopping cart",
-  "version": "1.0.0",
-  "author": "me",
+  "version": "1.0.1",
+  "author": "alfajor",
   "license": "MIT",
+  "keywords": [
+    "react cart",
+    "shopping cart",
+    "cart"
+  ],
+  "homepage": "https://github.com/alfajor/alla-cart",
   "type": "module",
   "main": "dist/alla-cart.umd.js",
   "module": "dist/alla-cart.es.js",
@@ -11,7 +17,8 @@
   "exports": {
     ".": {
       "import": "./dist/alla-cart.es.js",
-      "require": "./dist/alla-cart.umd.js"
+      "require": "./dist/alla-cart.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
