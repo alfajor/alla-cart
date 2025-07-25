@@ -1,13 +1,14 @@
 {
   "name": "alla-cart",
   "description": "A simple, customizable shopping cart",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "alfajor",
   "license": "MIT",
   "keywords": [
     "react cart",
     "shopping cart",
-    "cart"
+    "cart",
+    "ecommerce"
   ],
   "homepage": "https://github.com/alfajor/alla-cart",
   "type": "module",
