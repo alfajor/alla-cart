@@ -3,7 +3,7 @@ import Cookies from 'universal-cookie';
 
 export interface CartProductTypes {
     id: string,
-    quantity: number
+    quantity?: number
 };
 
 export interface CartOperations {

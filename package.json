@@ -1,7 +1,7 @@
 {
   "name": "alla-cart",
   "description": "A simple, customizable shopping cart",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "alfajor",
   "license": "MIT",
   "keywords": [
@@ -10,7 +10,7 @@
     "cart",
     "ecommerce"
   ],
-  "homepage": "https://github.com/alfajor/alla-cart",
+  "homepage": "https://alfajor.github.io/alla-cart",
   "type": "module",
   "main": "dist/alla-cart.umd.js",
   "module": "dist/alla-cart.es.js",

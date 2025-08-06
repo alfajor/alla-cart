@@ -79,6 +79,7 @@ type CartProps = {
   cartCTABackgroundColor?: string, // cta background color - optional
   cartCTAColor?: string, // cta color - optional
   emptyCartText?: string, // custom empty cart message - optional
+  cartCTAButtonStyle?: 'regular' | 'pill', // button style - optional
   cartIcon?: React.ReactNode, // custom cart icon - optional
   trashIcon?: React.ReactNode, // custom trash icon - optional
   quantityButtonPadding?: string // custom padding for the quantity counter (+/-) - optional
